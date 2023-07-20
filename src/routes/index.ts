@@ -4,10 +4,12 @@ import roleMd from 'middleware/roleMiddleware'
 import authenticationRoutes from 'routes/authenticationRoutes'
 import adminRoutes from './adminRoutes'
 import { UserRole } from '../mongo/schema/users'
+import ffeRoutes from './ffeRoutes'
 
 const router = express.Router()
 
 router.use('/', authenticationRoutes)
+router.use('/ffe', ffeRoutes) // Use FFERoutes at /ffe path
 
 router.use(
     '/admin',

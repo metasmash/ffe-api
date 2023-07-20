@@ -1,15 +1,27 @@
-# Basic API boilerplate
+# FFE Administration API
 ___
 
-### If you want to build your api with docker
+### Prerequisites:
+- [Docker](https://docs.docker.com/install/)
+- [Node.js](https://nodejs.org/en/download/)
+- [NPM](https://www.npmjs.com/get-npm)
+- [Postman](https://www.getpostman.com/downloads/)
+- [Git](https://git-scm.com/downloads)
 
-``docker build --no-cache -t example-api .``
+### Installation:
+
+Clone the repository:
+
+``git clone git@github.com:metasmash/ffe-api.git``
+___
+### For production purpose:
+TO DEFINE
 
 ### For development purpose:
 
-Start all your containers:
+Start mongodb:
 
-``docker-compose --env-file ./configs/example.env up -d``
+``docker-compose up -d mongodb``
 
 Install dependencies:
 
@@ -18,18 +30,6 @@ Install dependencies:
 Start your api:
 
 ``npm run dev``
-___
-### Running apps and ports:
-
-
-| Service                  | URL                                                      | USAGE                                                           |
-|--------------------------|----------------------------------------------------------|-----------------------------------------------------------------|
-| __API__                  | [http://localhost:8080](http://localhost:8080)           | Express server                                                  |
-| __API documentation__    | [http://localhost:8080/docs](http://localhost:8080/docs) | Swagger documentation to directly use API call                  |
-| __Mongo express client__ | [http://localhost:8081](http://localhost:8081)           | Mongo express client                                            |
-___
-### Credentials:
-
-If you want to know __username/password__ for __Mongo client__, check ``configs/example.env`` file.
 
 ___
+
